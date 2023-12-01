@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fully Responsive Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" media="screen and (max-width: 1170px)" href="style1.css">
+    <style>
+      /* CSS reset */
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      /* CSS Variables */
+      :root {
+        --navbarh-height: 59px;
+      }
+      /* navigation bar */
+      #navbar {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      /* logo and img */
+      #logo {
+        margin: 10px 34px;
+      }
+      #logo img {
+        width: 66px;
+        height: 66px;
+        margin: 3px;
+        border-radius: 30px;
+      }
+
+      #navbar ul {
+        display: flex;
+        
+
+        font-family: "Bree Serif", serif;
+      }
+
+      #navbar::before {
+        content: "";
+        background-color: rgb(215, 212, 187);
+        position: absolute;
+        top:0px;
+        left:0px;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+      }
+      #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+        
+        
+      }
+      #navbar ul li a {
+        background-color: rgb(58, 56, 56);
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-right: 4px;
+      }
+      #navbar ul li a:hover {
+        background-color: rgb(0, 0, 0);
+      }
+
+      /* home section */
+      #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        justify-content: center;
+        align-items: center;
+        height: 588px;
+      }
+
+      #home::before {
+        content: "";
+        background: url(https://img.freepik.com/free-photo/top-view-fresh-red-tomatoes-with-greens-dark-surface-ripe-salad-color_140725-82441.jpg?w=2000&t=st=1692260588~exp=1692261188~hmac=b894a1cc3984a7e22c7617f940df75912064ea2baeca7ad62614a1c7792226d3) no-repeat center center/cover;
+        position: absolute;
+        height: 682px;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+        top:0px;
+        left:0px;
+      }
+
+      #home h1 {
+        color: white;
+        text-align: center;
+        font-family: "Bree Serif", serif;
+      }
+      #home p {
+        color: white;
+        text-align: center;
+        font-family: "Bree Serif", serif;
+      }
+
+      /* utility classes */
+      .h-primary {
+        font-size: 2.8rem;
+        padding: 12px;
+        font-family: "Bree Serif", serif;
+      }
+      .h-secondary{
+        font-size: 1.8rem;
+        padding: 12px;
+        font-family: "Bree Serif", serif;
+
+      }
+      .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: grey;
+        color: white;
+        margin: 17px;
+        font-size: 1.1rem;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .center{
+        text-align: center;
+      }
+      /* services section */
+      
+      #services{
+            margin:4px;
+            display:flex;
+      }
+      #services .box{
+        /* border: 2px solid rgb(0, 0, 0); */
+        margin:25px 36px;
+        padding:5px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+      }
+
+      #services .box img{
+        margin: auto;
+        display: block;
+        height:160px;
+        width:250px;
+      }
+
+      #services .box p{
+        font-family: "Bree Serif", serif;
+      }
+
+      /* Clients section  */
+      #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+      #clients img{
+        height:124px;
+      }
+
+
+      #client-section{
+        position: relative;
+        height:325px;
+      }
+      .client-item{
+        /* padding: 34px; */
+      }
+      #client-section::before{
+        content: "";
+        position: absolute;
+        /* background: url(https://img.freepik.com/free-photo/top-view-fresh-red-tomatoes-with-greens-dark-surface-ripe-salad-color_140725-82441.jpg?w=2000&t=st=1692260588~exp=1692261188~hmac=b894a1cc3984a7e22c7617f940df75912064ea2baeca7ad62614a1c7792226d3) no-repeat center center/cover; */
+        background-color: rgb(226, 224, 224);
+        width:100%;
+        height:100%;
+        z-index:-1;
+        opacity: 0.4;
+      }
+
+      /* contact section  */
+      #contact{
+       position: relative;
+       
+      }
+
+      #contact::before{
+        content:"";
+        position: absolute;
+        width:100%;
+        height:100%;
+        z-index: -1;
+        opacity:0.7;
+        background: url(https://img.freepik.com/free-photo/top-view-fresh-red-tomatoes-with-greens-dark-surface-ripe-salad-color_140725-82441.jpg?w=2000&t=st=1692260588~exp=1692261188~hmac=b894a1cc3984a7e22c7617f940df75912064ea2baeca7ad62614a1c7792226d3) no-repeat center center/cover;
+        
+
+      }
+      #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+
+      }
+      #contact-box input,
+      #contact-box textarea{
+        width: 100%;
+        padding:0.5rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+      }
+      #contact-box form{
+        
+        font-family: "Bree Serif", serif;
+        width:40%;
+
+      }
+      #contact-box label{
+        font-size: 1.3rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+      }
+      footer{
+        background-color: black;
+        padding: 2px;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <!-- <img
+          src="https://img.freepik.com/premium-vector/man-is-riding-motorcycle-flat-cartoon-design-premium-simple-vector-art_895122-719.jpg?w=2000"
+          alt="" -->
+          <!-- <img src="https://as2.ftcdn.net/v2/jpg/01/06/64/21/1000_F_106642104_XLmtta83gBx0a34rvervSLgmhALvIylf.jpg" alt=""> -->
+          <img src="https://www.agourahillscity.org/home/showpublishedimage/6380/638242339876100000" alt="">
+        />
+      </div>
+
+      <ul>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">Services</a></li>
+        <li class="item"><a href="#">About Us</a></li>
+        <li class="item"><a href="#">Contact Us</a></li>
+        <!-- <li class="item"><a href="#"></a></li> -->
+      </ul>
+    </nav>
+
+    <section id="home">
+      <h1 class="h-primary">Welcome to CataFoods</h1>
+      <p>
+        CataFoods is a restaurant with an unlimited range of cocktails, mocktails, international/premium spirits, beers and wines set in a funky, young ambience with some cool, neo-age music as well as Live performances – the perfect place where you would want to hang out with your gang! That’s not all! Don’t just chill, go crazy for the eats too – with a focus on finger food and small plates, the menu curated by best chefs features pop dishes from world and Indian cuisine.
+      </p>
+      <p>
+        A perfect mélange of food, drinks, music and ambience. What else would you want!?
+      </p>
+      <button class="btn">Order Now</button>
+    </section>
+
+    <section class="servicescontainer">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://img.freepik.com/free-vector/delivery-service-with-masks-concept_23-2148509518.jpg?w=2000&t=st=1692351576~exp=1692352176~hmac=56f5fa73a1e3d8c67d088fcf81486ca3c4f047205c7f6b81e12e7b1778414567" alt="">
+                <h2 class="h-secondary center">Food Delivery</h2>
+                <p class="center">Get hot and healthy food delivered to your house safely and super quick by our foreign trained delivery executives</p>
+            </div>
+            <div class="box">
+                <img src="https://media.istockphoto.com/id/157107774/vector/magic-cooking.jpg?s=612x612&w=0&k=20&c=xPlbpzZP-QxEg4OCJEgc23J2_gH2v-Fv6uFP12LpSq4=" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Get yourself catered with the best chefs that are both trained and equipped locally making you feel close to your home anywhere</p>
+            </div>
+            <div class="box">
+                <img src="https://www.littlestepsasia.com/wp-content/uploads/2021/04/Zero-Waste-And-Bulk-Food-Shopping-Stores-In-Hong-Kong.jpg" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Order any amount of any food or raw materials for any occasion of your life. Remember nothing is too small or too large for us. </p>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://eventective-media.azureedge.net/2115563_lg.jpg" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://lh3.googleusercontent.com/cnHWCeUq70U-OiIJBdeZZdu-uOQmLiTrMxjRC-iyHwpjJGyuEhGmi5dTo7uraR5SWRCTYYpB52CmIGiDeIbK0EGzxbs=w100-rw" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://www.sanjeevkapoor.com/UploadFiles/RestaurantImages/Sura_Vie_Restaurant_LogoImage.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://logopond.com/logos/64f98063d317d8b96dfe4c79b073d6cc.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://img.freepik.com/premium-vector/crab-seafood-restaurant-logo-combination-logo-design_619119-163.jpg?w=1380" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone</label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter Your Message" cols="30" rows="10"></textarea>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+    <hr>
+
+    <footer>
+       <div class="center">
+        Copyright &copy; www.CataFoods.com. All rights reserved
+       </div>
+    </footer>
+  </body>
+</html>
