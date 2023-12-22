@@ -52,3 +52,13 @@ int main() {
     cout << op2 << endl << op1 << endl;
     return 0;
 }
+
+// Enter the Parent Non-Terminal : A
+// Enter the number of productions : 2
+// Enter Production 1 : Aa
+// Enter Production 2 : b
+// Production Rule : A->Aa|b
+// Production 1 has left recursion.
+// Production 2 does not have left recursion.
+// A->bA'|
+// A'->aA'|#
