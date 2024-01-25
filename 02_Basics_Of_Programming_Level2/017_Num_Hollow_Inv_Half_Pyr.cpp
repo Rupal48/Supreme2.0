@@ -15,7 +15,7 @@ int main() {
                 if (col==0||col==n-row-1) {
                     cout << row+col+1;
                 }
-                //Gaps in b/w rows
+                //Gaps in b/w cols
                 else {
                     cout << " ";
                 }
