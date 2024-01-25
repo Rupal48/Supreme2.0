@@ -9,8 +9,8 @@ int main() {
     // cout << (~num + 1);
     // if (~0 == 1) cout <<"yes";
     // else cout << "no";
-    // int x = -5;
-    // x = x >> 1;
-    // cout << x;
+    int x = -9;
+    x = x >> 1;
+    cout << x;
     return 0;
 }
