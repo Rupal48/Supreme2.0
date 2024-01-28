@@ -37,6 +37,10 @@ int main() {
     // int n;
     // cin >> n;
     // int binary = decimalToBinaryDivMethod(6);
+
+    // 6 ke liye ans glt aara aur mmaybe allso for some more inputs
+    // Just a vs thing no need to worry
+
     int binary = decimalToBinaryBitwiseMethod(6);
     cout << binary << endl;
 
