@@ -11,6 +11,7 @@ void TwoPointerSort0and1(vector<int>& arr) {
     int right = arr.size()-1;
     while(left<right) {
         if (arr[left]==0) left++;
+        // Case for arr[left]==1
         else {
             swap(arr[left],arr[right]);
             right--;
