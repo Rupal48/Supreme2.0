@@ -12,10 +12,19 @@ int countSetBits(int n) {
     // }
     // return count;
 
+
     // 2. Bitwise Method            // Preferable because bitwise operations are faster on a computer
-    while (n) {
-        if (n&1) count++;           // Same as if (n&1 == 1)
-        n >>= 1;                    // Same as n = n >> 1;
+    // while (n) {
+    //     if (n&1) count++;           // Same as if (n&1 == 1)
+    //     n >>= 1;                    // Same as n = n >> 1;
+    // }
+    // return count;
+
+
+    // 3. Another Bitwise Method
+    while(n) {
+        n = n&(n-1);
+        count++;
     }
     return count;
 
