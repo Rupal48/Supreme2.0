@@ -1,3 +1,6 @@
+// This soln is not optimal
+// Optimal is done further ahead in 14 and 15
+
 #include <iostream>
 using namespace std;
 
