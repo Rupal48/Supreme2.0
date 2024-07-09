@@ -2,10 +2,10 @@
 #include <limits.h>
 using namespace std;
 int main() {
-    int arr[3][3] = {{1,2,3},{1,4,5},{3,5,7}};
+    int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
     int row=3,col=3;
     for (int i=0;i<row;i++) {
-        for (int j=i;j<col;j++) {
+        for (int j=0;j<i;j++) {
             swap(arr[i][j],arr[j][i]);
         }
     }
