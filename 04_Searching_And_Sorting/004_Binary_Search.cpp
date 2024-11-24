@@ -38,6 +38,6 @@ int main() {
 
     int ansIndex = binarySearch(arr,n,target);
 
-    cout << target << " found at " << ansIndex; 
+    cout << target << " found at index " << ansIndex; 
     return 0;
 }
